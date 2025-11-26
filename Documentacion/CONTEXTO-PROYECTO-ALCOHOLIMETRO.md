@@ -114,48 +114,49 @@ Recursos:
    - Foreign keys en todas las relaciones
    - Campos de timestamp automáticos
 
-## 🚀 STACK TECNOLÓGICO PROPUESTO
+## 🚀 STACK TECNOLÓGICO DEFINIDO
 
-### Backend
-- **Runtime**: Node.js 20 LTS
-- **Framework**: Express.js + TypeScript
-- **ORM**: Prisma (por configurar con BD existente)
-- **Auth**: JWT + Passport.js
-- **WebSocket**: Socket.io
-- **Cache**: Redis
-- **Queue**: Bull
+### Backend - PHP CLÁSICO
+- **Lenguaje**: PHP 7.4+ (sin frameworks)
+- **Base de Datos**: MySQL/MariaDB
+- **Autenticación**: Sesiones PHP nativas
+- **Password Hash**: bcrypt nativo de PHP
+- **Sin Composer**: Todo código propio
+- **Sin NPM**: Sin dependencias Node.js
 
-### Frontend
-- **Framework**: React 18 + TypeScript
-- **UI**: Material-UI v5
-- **State**: Redux Toolkit
-- **Charts**: Recharts
-- **Forms**: React Hook Form
+### Frontend - HTML/CSS/JS VANILLA
+- **HTML5**: Estructura semántica
+- **CSS3**: Estilos propios (sin Bootstrap)
+- **JavaScript**: Vanilla (sin jQuery)
+- **AJAX**: Fetch API nativo
+- **Sin React/Vue**: JavaScript puro
 
-### Mobile
-- **Framework**: React Native
-- **State**: Redux Persist
-- **Maps**: React Native Maps
-- **Bluetooth**: React Native BLE
+### Arquitectura
+- **Patrón**: MVC simple sin framework
+- **Estructura**: Carpetas mínimas
+- **Includes**: PHP require/include
+- **API**: Endpoints PHP simples
+- **Sin ORM**: Consultas SQL directas
 
-### DevOps
-- **Containers**: Docker
-- **CI/CD**: GitHub Actions
-- **Cloud**: Por definir (AWS/GCP/Azure)
+### Ventajas del Enfoque
+- **Simplicidad**: Fácil de entender
+- **Portabilidad**: Funciona en cualquier hosting
+- **Performance**: Sin overhead de frameworks
+- **Mantenimiento**: Sin dependencias externas
 
 ## 📝 TAREAS INMEDIATAS
 
 ### Prioridad Alta
 1. ⚠️ Crear datos de prueba en `tb_pruebas` (tabla vacía)
-2. ⚠️ Unificar collation de BD a utf8mb4_unicode_ci
-3. ⚠️ Decidir sobre tabla `users` vs `tb_usuarios`
+2. ✅ Script SQL completo creado (database.sql)
+3. ✅ Arquitectura PHP clásico definida
 
-### Siguiente Sprint
-1. Configurar Prisma con BD existente
-2. Crear API REST básica
-3. Implementar autenticación JWT
-4. Crear endpoints CRUD para pruebas
-5. Desarrollar dashboard inicial
+### Siguiente Sprint - PHP CLÁSICO
+1. Ejecutar script database.sql en MySQL
+2. Configurar archivo config.php
+3. Crear estructura de carpetas
+4. Desarrollar módulo de login
+5. Implementar módulo de pruebas
 
 ## 🎨 DECISIONES DE DISEÑO TOMADAS
 

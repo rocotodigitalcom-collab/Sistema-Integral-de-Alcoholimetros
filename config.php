@@ -13,8 +13,12 @@ define('DB_CHARSET', 'utf8mb4');
 // Configuración del Sistema
 define('SISTEMA_NOMBRE', 'Sistema Integral de Alcoholímetros');
 define('SISTEMA_VERSION', '1.0.0');
-define('SISTEMA_URL', 'https://alcoholimetro.rocotodigital.com');
+define('SISTEMA_URL', 'http://alcoholimetro.rocotodigital.com');
 define('TIMEZONE', 'America/Lima');
+
+// Directorios
+define('DIR_ROOT', __DIR__ . '/');
+define('UPLOAD_PATH', DIR_ROOT . 'uploads/');
 
 // Sesiones
 define('SESSION_LIFETIME', 3600);
@@ -22,7 +26,6 @@ define('SESSION_NAME', 'alcoholimetros_session');
 
 // Archivos
 define('MAX_UPLOAD_SIZE', 5242880); // 5 MB
-define('UPLOAD_PATH', __DIR__ . '/uploads/');
 
 // Niveles de Alcohol (g/L)
 define('ALCOHOL_APROBADO', 0.024);
@@ -38,8 +41,10 @@ define('RETEST_INTENTOS_MAX', 3);
 date_default_timezone_set(TIMEZONE);
 
 // Iniciar sesión
-session_name(SESSION_NAME);
-session_start();
+if (!isset($_SESSION)) {
+    session_name(SESSION_NAME);
+    session_start();
+}
 
 // Conexión a Base de Datos
 try {
@@ -54,6 +59,11 @@ try {
         )
     );
 } catch (PDOException $e) {
+    // Si la BD no existe, mostrar instalador
+    if (strpos($e->getMessage(), 'Unknown database') !== false) {
+        header('Location: install.php');
+        exit();
+    }
     die("Error de conexión: " . $e->getMessage());
 }
 ?>
