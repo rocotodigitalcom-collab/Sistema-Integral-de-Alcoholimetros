@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 26-11-2025 a las 04:01:12
+-- Tiempo de generación: 01-12-2025 a las 00:26:43
 -- Versión del servidor: 10.11.13-MariaDB-cll-lve
 -- Versión de PHP: 8.3.28
 
@@ -20,6 +20,18 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `juegosd2_alcohol`
 --
+
+DELIMITER $$
+--
+-- Procedimientos
+--
+CREATE DEFINER=`wepanel_juegosd2`@`localhost` PROCEDURE `SolicitarRetest` (IN `p_prueba_original_id` INT, IN `p_solicitado_por` INT, IN `p_motivo` TEXT)   BEGIN
+    DECLARE v_intentos_permisibles INT$$
+
+CREATE DEFINER=`wepanel_juegosd2`@`localhost` PROCEDURE `VerificarLimitesPlan` (IN `p_cliente_id` INT, IN `p_tipo_limite` VARCHAR(50))   BEGIN
+    DECLARE v_plan_id INT$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -47,8 +59,9 @@ CREATE TABLE `alcoholimetros` (
 --
 
 INSERT INTO `alcoholimetros` (`id`, `cliente_id`, `numero_serie`, `nombre_activo`, `modelo`, `marca`, `fecha_calibracion`, `proxima_calibracion`, `estado`, `qr_code`, `fecha_creacion`, `fecha_actualizacion`) VALUES
-(1, 1, 'ALC-001', 'Alcoholímetro Principal', 'AL-3000', 'AlcoTest', '2024-01-15', '2025-01-15', 'activo', NULL, '2025-11-25 12:10:30', '2025-11-25 12:10:30'),
-(2, 1, 'ALC-002', 'Alcoholímetro Secundario', 'AL-2500', 'AlcoTest', '2024-02-20', '2025-02-20', 'activo', NULL, '2025-11-25 12:10:30', '2025-11-25 12:10:30');
+(1, 1, 'ALC-001', 'Alcoholímetro Principal', 'AL-3000', 'AlcoTest', '2024-01-15', '2025-01-15', 'activo', 'qr_ALC-001_1764393745.png', '2025-11-25 12:10:30', '2025-11-29 05:22:25'),
+(2, 1, 'ALC-002', 'Alcoholímetro Secundario', 'AL-2500', 'AlcoTest', '2024-02-20', '2025-02-20', 'activo', NULL, '2025-11-25 12:10:30', '2025-11-25 12:10:30'),
+(3, 1, 'ALC-003', 'Alcoholímetro manual', 'AL-3001', 'AlcoTest', '2025-11-01', '2026-11-30', 'activo', NULL, '2025-11-29 04:47:21', '2025-11-29 04:47:21');
 
 -- --------------------------------------------------------
 
@@ -96,7 +109,35 @@ INSERT INTO `auditoria` (`id`, `cliente_id`, `usuario_id`, `accion`, `tabla_afec
 (18, 1, 2, 'CONFIG_RETEST', 'configuraciones', 1, NULL, NULL, 'Actualización de protocolo re-test', '179.6.2.56', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-26 03:48:21'),
 (19, 1, 2, 'LOGIN', 'usuarios', 2, NULL, NULL, 'Inicio de sesión exitoso', '179.6.2.56', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-26 03:49:04'),
 (20, 1, 2, 'BACKUP', NULL, NULL, NULL, NULL, 'Backup manual realizado', '179.6.2.56', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-26 03:57:04'),
-(21, 1, 2, 'BACKUP', NULL, NULL, NULL, NULL, 'Backup manual realizado', '179.6.2.56', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-26 03:57:34');
+(21, 1, 2, 'BACKUP', NULL, NULL, NULL, NULL, 'Backup manual realizado', '179.6.2.56', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-26 03:57:34'),
+(22, 1, 1, 'LOGOUT', 'usuarios', 1, NULL, NULL, 'Cierre de sesión', '179.6.2.56', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-26 05:36:07'),
+(23, 1, 2, 'LOGOUT', 'usuarios', 2, NULL, NULL, 'Cierre de sesión', '179.6.2.56', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-26 05:36:16'),
+(24, 1, 2, 'LOGOUT', 'usuarios', 2, NULL, NULL, 'Cierre de sesión', '179.6.2.56', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-26 05:41:00'),
+(25, 1, 2, 'LOGOUT', 'usuarios', 2, NULL, NULL, 'Cierre de sesión', '179.6.2.56', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-26 05:59:03'),
+(26, 1, 2, 'LOGOUT', 'usuarios', 2, NULL, NULL, 'Cierre de sesión', '179.6.2.56', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-26 06:34:58'),
+(27, 1, 2, 'LOGOUT', 'usuarios', 2, NULL, NULL, 'Cierre de sesión', '179.6.2.56', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-26 06:42:13'),
+(28, 1, 2, 'LOGOUT', 'usuarios', 2, NULL, NULL, 'Cierre de sesión', '179.6.2.56', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-26 06:45:10'),
+(29, 1, 2, 'LOGIN', 'usuarios', 2, NULL, NULL, 'Inicio de sesión exitoso', '179.6.2.56', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-26 20:05:40'),
+(30, 1, 2, 'CONFIG_EMPRESA', 'clientes', 1, NULL, NULL, 'Actualización de información de la empresa', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-28 03:28:35'),
+(31, 1, 2, 'CONFIG_EMPRESA', 'clientes', 1, NULL, NULL, 'Actualización de información de la empresa', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-28 03:28:42'),
+(32, 1, 2, 'CONFIG_EMPRESA', 'clientes', 1, NULL, NULL, 'Actualización de información de la empresa', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-28 03:28:49'),
+(33, 1, 2, 'ACTUALIZAR_ALCOHOLIMETRO', 'alcoholimetros', 1, NULL, NULL, 'Alcoholímetro actualizado', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-29 04:35:07'),
+(34, 1, 2, 'ACTUALIZAR_ALCOHOLIMETRO', 'alcoholimetros', 1, NULL, NULL, 'Alcoholímetro actualizado', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-29 04:35:12'),
+(35, 1, 2, 'ACTUALIZAR_ALCOHOLIMETRO', 'alcoholimetros', 1, NULL, NULL, 'Alcoholímetro actualizado', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-29 04:35:17'),
+(36, 1, 2, 'ACTUALIZAR_ALCOHOLIMETRO', 'alcoholimetros', 1, NULL, NULL, 'Alcoholímetro actualizado', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-29 04:35:29'),
+(37, 1, 2, 'ACTUALIZAR_ALCOHOLIMETRO', 'alcoholimetros', 1, NULL, NULL, 'Alcoholímetro actualizado', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-29 04:46:19'),
+(38, 1, 2, 'ACTUALIZAR_ALCOHOLIMETRO', 'alcoholimetros', 1, NULL, NULL, 'Alcoholímetro actualizado', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-29 04:46:34'),
+(39, 1, 2, 'ACTUALIZAR_ALCOHOLIMETRO', 'alcoholimetros', 1, NULL, NULL, 'Alcoholímetro actualizado', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-29 04:46:46'),
+(40, 1, 2, 'CREAR_ALCOHOLIMETRO', 'alcoholimetros', 3, NULL, NULL, 'Alcoholímetro creado', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-29 04:47:21'),
+(41, 1, 2, 'GENERAR_QR_INDIVIDUAL', 'alcoholimetros', 1, NULL, NULL, 'Código QR generado: qr_ALC-001_1764393745.png', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-29 05:22:25'),
+(42, 1, 2, 'DESCARGAR_QR', 'alcoholimetros', 1, NULL, NULL, 'Descarga de código QR: qr_ALC-001_1764393745.png', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-29 05:22:31'),
+(43, 1, 2, 'DESCARGAR_QR', 'alcoholimetros', 1, NULL, NULL, 'Descarga de código QR: qr_ALC-001_1764393745.png', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-29 05:22:56'),
+(44, 1, 2, 'DESCARGAR_QR', 'alcoholimetros', 1, NULL, NULL, 'Descarga de código QR: qr_ALC-001_1764393745.png', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-29 05:30:34'),
+(45, 1, 2, 'CREAR_VEHICULO', 'vehiculos', 3, NULL, NULL, 'Vehículo DEF-456777 - Nissan Frontier - Estado: activo', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-29 06:49:50'),
+(46, 1, 2, 'CREAR_CONDUCTOR', 'usuarios', 0, NULL, NULL, 'Conductor Pedro Ramirez - DNI: 57845478 - Estado: Activo', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-29 06:57:56'),
+(47, 1, 2, 'CREAR_CONDUCTOR', 'usuarios', 0, NULL, NULL, 'Conductor Pedro Ramirez - DNI: 57845478 - Estado: Activo', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-29 06:58:04'),
+(48, 1, 2, 'CREAR_CONDUCTOR', 'usuarios', 6, NULL, NULL, 'Conductor Pedro Ramirez - DNI: 40766447 - Estado: Activo', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-29 07:08:47'),
+(49, 1, 2, 'CREAR_PRUEBA', 'pruebas', 1, NULL, NULL, 'Prueba creada - Nivel: 0.1 g/L', '179.6.3.42', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', '2025-11-30 04:05:37');
 
 -- --------------------------------------------------------
 
@@ -108,7 +149,10 @@ CREATE TABLE `backups` (
   `id` int(11) NOT NULL,
   `cliente_id` int(11) DEFAULT NULL,
   `archivo` varchar(255) NOT NULL,
+  `ruta_archivo` varchar(500) DEFAULT NULL,
   `tamanio` bigint(20) DEFAULT NULL,
+  `hash_verificacion` varchar(100) DEFAULT NULL,
+  `incluye_archivos` tinyint(1) DEFAULT 0,
   `tipo` enum('manual','automatico') DEFAULT 'manual',
   `estado` enum('completado','error','en_proceso') DEFAULT 'completado',
   `fecha_creacion` timestamp NULL DEFAULT current_timestamp(),
@@ -119,10 +163,10 @@ CREATE TABLE `backups` (
 -- Volcado de datos para la tabla `backups`
 --
 
-INSERT INTO `backups` (`id`, `cliente_id`, `archivo`, `tamanio`, `tipo`, `estado`, `fecha_creacion`, `observaciones`) VALUES
-(1, 1, 'backup_1_2024-11-25_03-00-00.sql', 2621440, 'automatico', 'completado', '2025-11-26 03:25:45', 'Backup diario automático'),
-(2, 1, 'backup_1_2024-11-24_03-00-00.sql', 2521340, 'automatico', 'completado', '2025-11-26 03:25:45', 'Backup diario automático'),
-(3, 1, 'backup_1_2024-11-23_15-30-00.sql', 2421240, 'manual', 'completado', '2025-11-26 03:25:45', 'Backup manual solicitado por usuario');
+INSERT INTO `backups` (`id`, `cliente_id`, `archivo`, `ruta_archivo`, `tamanio`, `hash_verificacion`, `incluye_archivos`, `tipo`, `estado`, `fecha_creacion`, `observaciones`) VALUES
+(1, 1, 'backup_1_2024-11-25_03-00-00.sql', NULL, 2621440, NULL, 0, 'automatico', 'completado', '2025-11-26 03:25:45', 'Backup diario automático'),
+(2, 1, 'backup_1_2024-11-24_03-00-00.sql', NULL, 2521340, NULL, 0, 'automatico', 'completado', '2025-11-26 03:25:45', 'Backup diario automático'),
+(3, 1, 'backup_1_2024-11-23_15-30-00.sql', NULL, 2421240, NULL, 0, 'manual', 'completado', '2025-11-26 03:25:45', 'Backup manual solicitado por usuario');
 
 -- --------------------------------------------------------
 
@@ -153,7 +197,7 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id`, `nombre_empresa`, `ruc`, `direccion`, `telefono`, `email_contacto`, `plan_id`, `logo`, `color_primario`, `color_secundario`, `fecha_registro`, `fecha_vencimiento`, `estado`, `token_api`, `modo_demo`) VALUES
-(1, 'Empresa Demo S.A.', '20123456789', 'Av. Demo 123, Lima', '01-234-5678', 'admin@demo.com', 1, NULL, '#84061f', '#427420', '2025-11-25 12:10:30', '2025-12-25', 'prueba', '8bd23693c01825696ee136aee8eae333', 1);
+(1, 'Empresa Demo S.A.C.', '20123456789', 'Av. Demo 123, Lima', '01-234-5678', 'admin@demo.com', 1, NULL, '#84061f', '#427420', '2025-11-25 12:10:30', '2025-12-25', 'prueba', '8bd23693c01825696ee136aee8eae333', 1);
 
 -- --------------------------------------------------------
 
@@ -207,6 +251,47 @@ INSERT INTO `configuraciones` (`id`, `cliente_id`, `limite_alcohol_permisible`, 
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `configuracion_notificaciones`
+--
+
+CREATE TABLE `configuracion_notificaciones` (
+  `id` int(11) NOT NULL,
+  `cliente_id` int(11) NOT NULL,
+  `notificaciones_email` tinyint(1) DEFAULT 1,
+  `notificaciones_sms` tinyint(1) DEFAULT 0,
+  `notificaciones_push` tinyint(1) DEFAULT 1,
+  `notificaciones_whatsapp` tinyint(1) DEFAULT 0,
+  `alerta_nivel_alto` tinyint(1) DEFAULT 1,
+  `alerta_nivel_medio` tinyint(1) DEFAULT 1,
+  `alerta_nivel_bajo` tinyint(1) DEFAULT 1,
+  `notificar_supervisor` tinyint(1) DEFAULT 1,
+  `notificar_admin` tinyint(1) DEFAULT 1,
+  `notificar_conductores` tinyint(1) DEFAULT 0,
+  `umbral_alto` decimal(5,3) DEFAULT 0.800,
+  `umbral_medio` decimal(5,3) DEFAULT 0.500,
+  `umbral_bajo` decimal(5,3) DEFAULT 0.300,
+  `intervalo_notificaciones` int(11) DEFAULT 60,
+  `horario_inicio` time DEFAULT '08:00:00',
+  `horario_fin` time DEFAULT '18:00:00',
+  `dias_activos` varchar(50) DEFAULT '1,2,3,4,5',
+  `plantilla_email` text DEFAULT NULL,
+  `plantilla_sms` text DEFAULT NULL,
+  `configuracion_avanzada` text DEFAULT NULL,
+  `estado` tinyint(1) DEFAULT 1,
+  `fecha_creacion` timestamp NULL DEFAULT current_timestamp(),
+  `fecha_actualizacion` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `configuracion_notificaciones`
+--
+
+INSERT INTO `configuracion_notificaciones` (`id`, `cliente_id`, `notificaciones_email`, `notificaciones_sms`, `notificaciones_push`, `notificaciones_whatsapp`, `alerta_nivel_alto`, `alerta_nivel_medio`, `alerta_nivel_bajo`, `notificar_supervisor`, `notificar_admin`, `notificar_conductores`, `umbral_alto`, `umbral_medio`, `umbral_bajo`, `intervalo_notificaciones`, `horario_inicio`, `horario_fin`, `dias_activos`, `plantilla_email`, `plantilla_sms`, `configuracion_avanzada`, `estado`, `fecha_creacion`, `fecha_actualizacion`) VALUES
+(1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0.800, 0.500, 0.300, 60, '08:00:00', '18:00:00', '1,2,3,4,5', 'Estimado usuario,\n\nSe ha registrado una prueba de alcohol con resultado: {resultado}.\nNivel: {nivel_alcohol} {unidad_medida}\nConductor: {conductor_nombre}\nFecha: {fecha_prueba}\n\nSaludos,\nSistema de Control de Alcohol', 'Alerta: Prueba {resultado}. Nivel: {nivel_alcohol}. Conductor: {conductor_nombre}', NULL, 1, '2025-11-28 05:18:02', '2025-11-28 05:18:02');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `config_notificaciones_eventos`
 --
 
@@ -226,9 +311,66 @@ CREATE TABLE `config_notificaciones_eventos` (
 --
 
 INSERT INTO `config_notificaciones_eventos` (`id`, `cliente_id`, `evento`, `notificar_email`, `notificar_sms`, `notificar_push`, `notificar_whatsapp`, `activo`) VALUES
-(1, 1, 'prueba_positiva', 1, 0, 1, 0, 1),
-(2, 1, 'retest_fallido', 1, 0, 1, 0, 1),
-(3, 1, 'conductor_bloqueado', 1, 0, 1, 0, 1);
+(1, 1, 'prueba_positiva', 1, 1, 1, 1, 1),
+(2, 1, 'retest_fallido', 1, 1, 1, 1, 1),
+(3, 1, 'conductor_bloqueado', 1, 1, 1, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `historial_niveles_alcohol`
+--
+
+CREATE TABLE `historial_niveles_alcohol` (
+  `id` int(11) NOT NULL,
+  `cliente_id` int(11) NOT NULL,
+  `usuario_id` int(11) NOT NULL,
+  `limite_anterior` decimal(5,3) NOT NULL,
+  `limite_nuevo` decimal(5,3) NOT NULL,
+  `nivel_advertencia_anterior` decimal(5,3) NOT NULL,
+  `nivel_advertencia_nuevo` decimal(5,3) NOT NULL,
+  `nivel_critico_anterior` decimal(5,3) NOT NULL,
+  `nivel_critico_nuevo` decimal(5,3) NOT NULL,
+  `motivo_cambio` text DEFAULT NULL,
+  `fecha_cambio` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `historial_planes`
+--
+
+CREATE TABLE `historial_planes` (
+  `id` int(11) NOT NULL,
+  `cliente_id` int(11) NOT NULL,
+  `plan_anterior_id` int(11) DEFAULT NULL,
+  `plan_nuevo_id` int(11) NOT NULL,
+  `fecha_cambio` timestamp NULL DEFAULT current_timestamp(),
+  `motivo_cambio` varchar(255) DEFAULT NULL,
+  `cambio_por` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `licencias`
+--
+
+CREATE TABLE `licencias` (
+  `id` int(11) NOT NULL,
+  `cliente_id` int(11) NOT NULL,
+  `conductor_id` int(11) NOT NULL,
+  `numero_licencia` varchar(20) NOT NULL,
+  `categoria` varchar(10) NOT NULL,
+  `fecha_emision` date NOT NULL,
+  `fecha_vencimiento` date NOT NULL,
+  `estado` enum('activa','vencida','suspendida','inactiva') DEFAULT 'activa',
+  `restricciones` text DEFAULT NULL,
+  `archivo_adjunto` varchar(255) DEFAULT NULL,
+  `fecha_creacion` timestamp NULL DEFAULT current_timestamp(),
+  `fecha_actualizacion` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -316,11 +458,15 @@ CREATE TABLE `planes` (
   `precio_mensual` decimal(10,2) NOT NULL,
   `limite_pruebas_mes` int(11) DEFAULT 1000,
   `limite_usuarios` int(11) DEFAULT 5,
+  `limite_conductores` int(11) DEFAULT 50,
+  `limite_vehiculos` int(11) DEFAULT 50,
   `limite_alcoholimetros` int(11) DEFAULT 10,
   `reportes_avanzados` tinyint(1) DEFAULT 0,
   `soporte_prioritario` tinyint(1) DEFAULT 0,
   `acceso_api` tinyint(1) DEFAULT 0,
   `almacenamiento_fotos` int(11) DEFAULT 100,
+  `backup_automatico` tinyint(1) DEFAULT 1,
+  `retencion_datos_meses` int(11) DEFAULT 12,
   `estado` tinyint(1) DEFAULT 1,
   `fecha_creacion` timestamp NULL DEFAULT current_timestamp(),
   `integraciones` tinyint(1) DEFAULT 0,
@@ -332,11 +478,30 @@ CREATE TABLE `planes` (
 -- Volcado de datos para la tabla `planes`
 --
 
-INSERT INTO `planes` (`id`, `nombre_plan`, `precio_mensual`, `limite_pruebas_mes`, `limite_usuarios`, `limite_alcoholimetros`, `reportes_avanzados`, `soporte_prioritario`, `acceso_api`, `almacenamiento_fotos`, `estado`, `fecha_creacion`, `integraciones`, `multi_sede`, `personalizacion`) VALUES
-(1, 'Free', 0.00, 30, 1, 1, 0, 0, 0, 100, 1, '2025-11-25 12:10:30', 0, 0, 0),
-(2, 'Starter', 49.00, 500, 5, 3, 0, 0, 0, 100, 1, '2025-11-25 12:10:30', 0, 0, 0),
-(3, 'Professional', 149.00, 2000, 20, 10, 1, 1, 1, 100, 1, '2025-11-25 12:10:30', 1, 0, 1),
-(4, 'Enterprise', 499.00, 99999, 99999, 99999, 1, 1, 1, 100, 1, '2025-11-25 12:10:30', 1, 1, 1);
+INSERT INTO `planes` (`id`, `nombre_plan`, `precio_mensual`, `limite_pruebas_mes`, `limite_usuarios`, `limite_conductores`, `limite_vehiculos`, `limite_alcoholimetros`, `reportes_avanzados`, `soporte_prioritario`, `acceso_api`, `almacenamiento_fotos`, `backup_automatico`, `retencion_datos_meses`, `estado`, `fecha_creacion`, `integraciones`, `multi_sede`, `personalizacion`) VALUES
+(1, 'Free', 0.00, 30, 1, 50, 50, 1, 0, 0, 0, 100, 1, 12, 1, '2025-11-25 12:10:30', 0, 0, 0),
+(2, 'Starter', 49.00, 500, 5, 50, 50, 3, 0, 0, 0, 100, 1, 12, 1, '2025-11-25 12:10:30', 0, 0, 0),
+(3, 'Professional', 149.00, 2000, 20, 50, 50, 10, 1, 1, 1, 100, 1, 12, 1, '2025-11-25 12:10:30', 1, 0, 1),
+(4, 'Enterprise', 499.00, 99999, 99999, 50, 50, 99999, 1, 1, 1, 100, 1, 12, 1, '2025-11-25 12:10:30', 1, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `programacion_backups`
+--
+
+CREATE TABLE `programacion_backups` (
+  `id` int(11) NOT NULL,
+  `cliente_id` int(11) NOT NULL,
+  `tipo_backup` enum('completo','incremental','diferencial') DEFAULT 'completo',
+  `frecuencia` enum('diario','semanal','mensual') DEFAULT 'diario',
+  `hora_ejecucion` time DEFAULT '02:00:00',
+  `dias_semana` varchar(20) DEFAULT NULL,
+  `dia_mes` int(11) DEFAULT NULL,
+  `activo` tinyint(1) DEFAULT 1,
+  `ultima_ejecucion` timestamp NULL DEFAULT NULL,
+  `proxima_ejecucion` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -357,6 +522,9 @@ CREATE TABLE `pruebas` (
   `es_retest` tinyint(1) DEFAULT 0,
   `prueba_padre_id` int(11) DEFAULT NULL,
   `intento_numero` int(11) DEFAULT 1,
+  `motivo_retest` varchar(100) DEFAULT NULL,
+  `aprobado_por_supervisor` tinyint(1) DEFAULT 0,
+  `fecha_aprobacion_retest` timestamp NULL DEFAULT NULL,
   `latitud` decimal(10,8) DEFAULT NULL,
   `longitud` decimal(11,8) DEFAULT NULL,
   `direccion_geocodificada` text DEFAULT NULL,
@@ -371,6 +539,41 @@ CREATE TABLE `pruebas` (
   `temperatura_ambiente` decimal(4,2) DEFAULT NULL,
   `humedad_ambiente` decimal(4,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `pruebas`
+--
+
+INSERT INTO `pruebas` (`id`, `cliente_id`, `alcoholimetro_id`, `conductor_id`, `supervisor_id`, `vehiculo_id`, `nivel_alcohol`, `limite_permisible`, `resultado`, `es_retest`, `prueba_padre_id`, `intento_numero`, `motivo_retest`, `aprobado_por_supervisor`, `fecha_aprobacion_retest`, `latitud`, `longitud`, `direccion_geocodificada`, `foto_evidencia`, `firma_conductor`, `firma_supervisor`, `observaciones`, `fecha_prueba`, `sync_movil`, `dispositivo_movil`, `hash_verificacion`, `temperatura_ambiente`, `humedad_ambiente`) VALUES
+(1, 1, 3, 6, 3, 1, 0.100, 0.000, 'reprobado', 0, NULL, 1, NULL, 0, NULL, -12.15692800, -76.99169280, NULL, NULL, NULL, NULL, 'ninguna', '2025-11-30 04:05:37', 0, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `regulaciones_alcohol`
+--
+
+CREATE TABLE `regulaciones_alcohol` (
+  `id` int(11) NOT NULL,
+  `pais` varchar(100) NOT NULL,
+  `codigo_pais` varchar(5) NOT NULL,
+  `limite_permisible` decimal(5,3) NOT NULL,
+  `unidad_medida` varchar(10) DEFAULT 'g/L',
+  `descripcion` text DEFAULT NULL,
+  `activo` tinyint(1) DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Volcado de datos para la tabla `regulaciones_alcohol`
+--
+
+INSERT INTO `regulaciones_alcohol` (`id`, `pais`, `codigo_pais`, `limite_permisible`, `unidad_medida`, `descripcion`, `activo`) VALUES
+(1, 'Perú', 'PE', 0.000, 'g/L', 'Límite cero alcohol para conductores', 1),
+(2, 'Chile', 'CL', 0.030, 'g/L', 'Límite general para conductores', 1),
+(3, 'Argentina', 'AR', 0.000, 'g/L', 'Límite cero alcohol para conductores', 1),
+(4, 'Colombia', 'CO', 0.020, 'g/L', 'Límite general para conductores', 1),
+(5, 'México', 'MX', 0.040, 'g/L', 'Límite general para conductores', 1),
+(6, 'España', 'ES', 0.050, 'g/L', 'Límite general para conductores experimentados', 1);
 
 -- --------------------------------------------------------
 
@@ -457,6 +660,24 @@ CREATE TABLE `sesiones` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `solicitudes_retest`
+--
+
+CREATE TABLE `solicitudes_retest` (
+  `id` int(11) NOT NULL,
+  `prueba_original_id` int(11) NOT NULL,
+  `solicitado_por` int(11) NOT NULL,
+  `motivo` text DEFAULT NULL,
+  `estado` enum('pendiente','aprobado','rechazado') DEFAULT 'pendiente',
+  `aprobado_por` int(11) DEFAULT NULL,
+  `fecha_solicitud` timestamp NULL DEFAULT current_timestamp(),
+  `fecha_resolucion` timestamp NULL DEFAULT NULL,
+  `observaciones_aprobacion` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `temas_personalizados`
 --
 
@@ -508,7 +729,9 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `cliente_id`, `nombre`, `apellido`, `email`, `password`, `telefono`, `dni`, `rol`, `foto_perfil`, `estado`, `ultimo_login`, `token_recuperacion`, `fecha_expiracion_token`, `intentos_login`, `bloqueado_hasta`, `fecha_creacion`) VALUES
 (1, NULL, 'Super', 'Administrador', 'superadmin@sistema.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, NULL, 'super_admin', NULL, 1, NULL, NULL, NULL, 0, NULL, '2025-11-25 12:10:30'),
-(2, 1, 'Admin', 'Demo', 'admin@demo.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, '12345678', 'admin', NULL, 1, '2025-11-26 03:49:04', NULL, NULL, 0, NULL, '2025-11-25 12:10:30');
+(2, 1, 'Admin', 'Demo', 'admin@demo.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, '12345678', 'admin', NULL, 1, '2025-11-26 20:05:40', NULL, NULL, 0, NULL, '2025-11-25 12:10:30'),
+(3, 1, 'Jose', 'Aguilar', 'fernando_7@hotmail.com', '$2y$10$RepK.j0a9EuYuf58yYEd1uMg4bAHfTDPJYPuNEqB1HpyEZnKbrMhW', '987456321', '40766447', 'supervisor', NULL, 1, NULL, NULL, NULL, 0, NULL, '2025-11-28 03:36:42'),
+(6, 1, 'Pedro', 'Ramirez', 'radiantcenter.com@gmail.com', '$2y$10$KirIVOUPjbVHAzwWEh83TuWByE8M2hUoNNuIKJjYLInOGZsz5zcA.', '987456321', '40766447', 'conductor', NULL, 1, NULL, NULL, NULL, 0, NULL, '2025-11-29 07:08:47');
 
 -- --------------------------------------------------------
 
@@ -535,7 +758,45 @@ CREATE TABLE `vehiculos` (
 
 INSERT INTO `vehiculos` (`id`, `cliente_id`, `placa`, `marca`, `modelo`, `anio`, `color`, `kilometraje`, `estado`, `fecha_creacion`) VALUES
 (1, 1, 'ABC-123', 'Toyota', 'Hilux', 2023, 'Blanco', 15000, 'activo', '2025-11-25 12:10:30'),
-(2, 1, 'DEF-456', 'Nissan', 'Frontier', 2022, 'Negro', 25000, 'activo', '2025-11-25 12:10:30');
+(2, 1, 'DEF-456', 'Nissan', 'Frontier', 2022, 'Negro', 25000, 'activo', '2025-11-25 12:10:30'),
+(3, 1, 'DEF-456777', 'Nissan', 'Frontier', 2022, 'Negro', 25000, 'activo', '2025-11-29 06:49:50');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura Stand-in para la vista `vista_retests`
+-- (Véase abajo para la vista actual)
+--
+CREATE TABLE `vista_retests` (
+`cliente_id` int(11)
+,`prueba_id` int(11)
+,`nivel_alcohol` decimal(5,3)
+,`resultado` enum('aprobado','reprobado')
+,`es_retest` tinyint(1)
+,`intento_numero` int(11)
+,`nivel_original` decimal(5,3)
+,`resultado_original` enum('aprobado','reprobado')
+,`minutos_diferencia` bigint(21)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura Stand-in para la vista `vista_uso_planes`
+-- (Véase abajo para la vista actual)
+--
+CREATE TABLE `vista_uso_planes` (
+`cliente_id` int(11)
+,`nombre_empresa` varchar(255)
+,`nombre_plan` varchar(100)
+,`limite_pruebas_mes` int(11)
+,`pruebas_este_mes` bigint(21)
+,`limite_usuarios` int(11)
+,`usuarios_activos` bigint(21)
+,`limite_alcoholimetros` int(11)
+,`alcoholimetros_activos` bigint(21)
+,`estado_pruebas` varchar(16)
+);
 
 -- --------------------------------------------------------
 
@@ -556,6 +817,24 @@ CREATE TABLE `webhooks` (
   `ultimo_estado` varchar(50) DEFAULT NULL,
   `fecha_creacion` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura para la vista `vista_retests`
+--
+DROP TABLE IF EXISTS `vista_retests`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`wepanel_juegosd2`@`localhost` SQL SECURITY DEFINER VIEW `vista_retests`  AS SELECT `p`.`cliente_id` AS `cliente_id`, `p`.`id` AS `prueba_id`, `p`.`nivel_alcohol` AS `nivel_alcohol`, `p`.`resultado` AS `resultado`, `p`.`es_retest` AS `es_retest`, `p`.`intento_numero` AS `intento_numero`, `p_prueba_original`.`nivel_alcohol` AS `nivel_original`, `p_prueba_original`.`resultado` AS `resultado_original`, timestampdiff(MINUTE,`p_prueba_original`.`fecha_prueba`,`p`.`fecha_prueba`) AS `minutos_diferencia` FROM (`pruebas` `p` left join `pruebas` `p_prueba_original` on(`p`.`prueba_padre_id` = `p_prueba_original`.`id`)) WHERE `p`.`es_retest` = 1 OR `p`.`prueba_padre_id` is not null ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura para la vista `vista_uso_planes`
+--
+DROP TABLE IF EXISTS `vista_uso_planes`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`wepanel_juegosd2`@`localhost` SQL SECURITY DEFINER VIEW `vista_uso_planes`  AS SELECT `c`.`id` AS `cliente_id`, `c`.`nombre_empresa` AS `nombre_empresa`, `p`.`nombre_plan` AS `nombre_plan`, `p`.`limite_pruebas_mes` AS `limite_pruebas_mes`, (select count(0) from `pruebas` `pr` where `pr`.`cliente_id` = `c`.`id` and month(`pr`.`fecha_prueba`) = month(current_timestamp())) AS `pruebas_este_mes`, `p`.`limite_usuarios` AS `limite_usuarios`, (select count(0) from `usuarios` `u` where `u`.`cliente_id` = `c`.`id`) AS `usuarios_activos`, `p`.`limite_alcoholimetros` AS `limite_alcoholimetros`, (select count(0) from `alcoholimetros` `a` where `a`.`cliente_id` = `c`.`id`) AS `alcoholimetros_activos`, CASE WHEN (select count(0) from `pruebas` `pr` where `pr`.`cliente_id` = `c`.`id` AND month(`pr`.`fecha_prueba`) = month(current_timestamp())) >= `p`.`limite_pruebas_mes` THEN 'LIMITE_ALCANZADO' ELSE 'DENTRO_LIMITE' END AS `estado_pruebas` FROM (`clientes` `c` join `planes` `p` on(`c`.`plan_id` = `p`.`id`)) ;
 
 --
 -- Índices para tablas volcadas
@@ -599,11 +878,45 @@ ALTER TABLE `configuraciones`
   ADD KEY `idx_configuraciones_cliente` (`cliente_id`);
 
 --
+-- Indices de la tabla `configuracion_notificaciones`
+--
+ALTER TABLE `configuracion_notificaciones`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `unique_cliente` (`cliente_id`);
+
+--
 -- Indices de la tabla `config_notificaciones_eventos`
 --
 ALTER TABLE `config_notificaciones_eventos`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `unique_cliente_evento` (`cliente_id`,`evento`);
+
+--
+-- Indices de la tabla `historial_niveles_alcohol`
+--
+ALTER TABLE `historial_niveles_alcohol`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `cliente_id` (`cliente_id`),
+  ADD KEY `usuario_id` (`usuario_id`);
+
+--
+-- Indices de la tabla `historial_planes`
+--
+ALTER TABLE `historial_planes`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `cliente_id` (`cliente_id`),
+  ADD KEY `plan_anterior_id` (`plan_anterior_id`),
+  ADD KEY `plan_nuevo_id` (`plan_nuevo_id`),
+  ADD KEY `cambio_por` (`cambio_por`);
+
+--
+-- Indices de la tabla `licencias`
+--
+ALTER TABLE `licencias`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `unique_numero_licencia` (`cliente_id`,`numero_licencia`),
+  ADD KEY `conductor_id` (`conductor_id`),
+  ADD KEY `cliente_id` (`cliente_id`);
 
 --
 -- Indices de la tabla `logs_configuracion`
@@ -635,6 +948,13 @@ ALTER TABLE `planes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `programacion_backups`
+--
+ALTER TABLE `programacion_backups`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `cliente_id` (`cliente_id`);
+
+--
 -- Indices de la tabla `pruebas`
 --
 ALTER TABLE `pruebas`
@@ -645,6 +965,12 @@ ALTER TABLE `pruebas`
   ADD KEY `supervisor_id` (`supervisor_id`),
   ADD KEY `vehiculo_id` (`vehiculo_id`),
   ADD KEY `prueba_padre_id` (`prueba_padre_id`);
+
+--
+-- Indices de la tabla `regulaciones_alcohol`
+--
+ALTER TABLE `regulaciones_alcohol`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `roles`
@@ -667,6 +993,15 @@ ALTER TABLE `sesiones`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `token_sesion` (`token_sesion`),
   ADD KEY `usuario_id` (`usuario_id`);
+
+--
+-- Indices de la tabla `solicitudes_retest`
+--
+ALTER TABLE `solicitudes_retest`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `prueba_original_id` (`prueba_original_id`),
+  ADD KEY `solicitado_por` (`solicitado_por`),
+  ADD KEY `aprobado_por` (`aprobado_por`);
 
 --
 -- Indices de la tabla `temas_personalizados`
@@ -705,13 +1040,13 @@ ALTER TABLE `webhooks`
 -- AUTO_INCREMENT de la tabla `alcoholimetros`
 --
 ALTER TABLE `alcoholimetros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `auditoria`
 --
 ALTER TABLE `auditoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT de la tabla `backups`
@@ -732,10 +1067,34 @@ ALTER TABLE `configuraciones`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT de la tabla `configuracion_notificaciones`
+--
+ALTER TABLE `configuracion_notificaciones`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `config_notificaciones_eventos`
 --
 ALTER TABLE `config_notificaciones_eventos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `historial_niveles_alcohol`
+--
+ALTER TABLE `historial_niveles_alcohol`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `historial_planes`
+--
+ALTER TABLE `historial_planes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `licencias`
+--
+ALTER TABLE `licencias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `logs_configuracion`
@@ -762,10 +1121,22 @@ ALTER TABLE `planes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT de la tabla `programacion_backups`
+--
+ALTER TABLE `programacion_backups`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `pruebas`
 --
 ALTER TABLE `pruebas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `regulaciones_alcohol`
+--
+ALTER TABLE `regulaciones_alcohol`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -786,6 +1157,12 @@ ALTER TABLE `sesiones`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `solicitudes_retest`
+--
+ALTER TABLE `solicitudes_retest`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `temas_personalizados`
 --
 ALTER TABLE `temas_personalizados`
@@ -795,13 +1172,13 @@ ALTER TABLE `temas_personalizados`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `vehiculos`
 --
 ALTER TABLE `vehiculos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `webhooks`
@@ -838,10 +1215,39 @@ ALTER TABLE `configuraciones`
   ADD CONSTRAINT `configuraciones_ibfk_1` FOREIGN KEY (`cliente_id`) REFERENCES `clientes` (`id`) ON DELETE CASCADE;
 
 --
+-- Filtros para la tabla `configuracion_notificaciones`
+--
+ALTER TABLE `configuracion_notificaciones`
+  ADD CONSTRAINT `config_notificaciones_ibfk_1` FOREIGN KEY (`cliente_id`) REFERENCES `clientes` (`id`) ON DELETE CASCADE;
+
+--
 -- Filtros para la tabla `config_notificaciones_eventos`
 --
 ALTER TABLE `config_notificaciones_eventos`
   ADD CONSTRAINT `config_notificaciones_eventos_ibfk_1` FOREIGN KEY (`cliente_id`) REFERENCES `clientes` (`id`) ON DELETE CASCADE;
+
+--
+-- Filtros para la tabla `historial_niveles_alcohol`
+--
+ALTER TABLE `historial_niveles_alcohol`
+  ADD CONSTRAINT `historial_niveles_alcohol_ibfk_1` FOREIGN KEY (`cliente_id`) REFERENCES `clientes` (`id`),
+  ADD CONSTRAINT `historial_niveles_alcohol_ibfk_2` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
+
+--
+-- Filtros para la tabla `historial_planes`
+--
+ALTER TABLE `historial_planes`
+  ADD CONSTRAINT `historial_planes_ibfk_1` FOREIGN KEY (`cliente_id`) REFERENCES `clientes` (`id`),
+  ADD CONSTRAINT `historial_planes_ibfk_2` FOREIGN KEY (`plan_anterior_id`) REFERENCES `planes` (`id`),
+  ADD CONSTRAINT `historial_planes_ibfk_3` FOREIGN KEY (`plan_nuevo_id`) REFERENCES `planes` (`id`),
+  ADD CONSTRAINT `historial_planes_ibfk_4` FOREIGN KEY (`cambio_por`) REFERENCES `usuarios` (`id`);
+
+--
+-- Filtros para la tabla `licencias`
+--
+ALTER TABLE `licencias`
+  ADD CONSTRAINT `licencias_ibfk_1` FOREIGN KEY (`conductor_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `licencias_ibfk_2` FOREIGN KEY (`cliente_id`) REFERENCES `clientes` (`id`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `logs_configuracion`
@@ -855,6 +1261,12 @@ ALTER TABLE `logs_configuracion`
 --
 ALTER TABLE `logs_notificaciones`
   ADD CONSTRAINT `logs_notificaciones_ibfk_1` FOREIGN KEY (`cliente_id`) REFERENCES `clientes` (`id`) ON DELETE CASCADE;
+
+--
+-- Filtros para la tabla `programacion_backups`
+--
+ALTER TABLE `programacion_backups`
+  ADD CONSTRAINT `programacion_backups_ibfk_1` FOREIGN KEY (`cliente_id`) REFERENCES `clientes` (`id`);
 
 --
 -- Filtros para la tabla `pruebas`
@@ -879,6 +1291,14 @@ ALTER TABLE `rol_permisos`
 --
 ALTER TABLE `sesiones`
   ADD CONSTRAINT `sesiones_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE;
+
+--
+-- Filtros para la tabla `solicitudes_retest`
+--
+ALTER TABLE `solicitudes_retest`
+  ADD CONSTRAINT `solicitudes_retest_ibfk_1` FOREIGN KEY (`prueba_original_id`) REFERENCES `pruebas` (`id`),
+  ADD CONSTRAINT `solicitudes_retest_ibfk_2` FOREIGN KEY (`solicitado_por`) REFERENCES `usuarios` (`id`),
+  ADD CONSTRAINT `solicitudes_retest_ibfk_3` FOREIGN KEY (`aprobado_por`) REFERENCES `usuarios` (`id`);
 
 --
 -- Filtros para la tabla `temas_personalizados`

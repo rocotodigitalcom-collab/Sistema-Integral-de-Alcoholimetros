@@ -1,0 +1,318 @@
+[26-Nov-2025 06:18:24 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined function checkAuth() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php:3
+Stack trace:
+#0 /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php(4): require_once()
+#1 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php on line 3
+[26-Nov-2025 06:18:35 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined function checkAuth() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php:3
+Stack trace:
+#0 /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php(4): require_once()
+#1 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php on line 3
+[26-Nov-2025 06:18:39 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined function checkAuth() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php:3
+Stack trace:
+#0 /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php(4): require_once()
+#1 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php on line 3
+[26-Nov-2025 06:23:37 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined function checkAuth() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php:3
+Stack trace:
+#0 /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php(4): require_once()
+#1 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php on line 3
+[26-Nov-2025 06:26:10 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined function checkAuth() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php:3
+Stack trace:
+#0 /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php(4): require_once()
+#1 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php on line 3
+[26-Nov-2025 06:26:59 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined function checkAuth() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php:3
+Stack trace:
+#0 /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php(4): require_once()
+#1 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php on line 3
+[26-Nov-2025 06:33:12 Europe/Madrid] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'juegosd2_alcohol_user'@'localhost' (using password: YES) in /home2/juegosd2/public_html/alcohol.rocotodigital.com/check_database.php on line 11
+[26-Nov-2025 06:33:12 Europe/Madrid] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'juegosd2_alcohol_user'@'localhost' (using password: YES) in /home2/juegosd2/public_html/alcohol.rocotodigital.com/check_database.php on line 29
+[26-Nov-2025 06:33:12 Europe/Madrid] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home2/juegosd2/public_html/alcohol.rocotodigital.com/check_database.php on line 30
+[26-Nov-2025 06:33:12 Europe/Madrid] PHP Notice:  Trying to get property 'num_rows' of non-object in /home2/juegosd2/public_html/alcohol.rocotodigital.com/check_database.php on line 31
+[26-Nov-2025 06:33:12 Europe/Madrid] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in /home2/juegosd2/public_html/alcohol.rocotodigital.com/check_database.php on line 36
+[26-Nov-2025 06:33:15 Europe/Madrid] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'juegosd2_alcohol_user'@'localhost' (using password: YES) in /home2/juegosd2/public_html/alcohol.rocotodigital.com/check_database.php on line 11
+[26-Nov-2025 06:33:15 Europe/Madrid] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'juegosd2_alcohol_user'@'localhost' (using password: YES) in /home2/juegosd2/public_html/alcohol.rocotodigital.com/check_database.php on line 29
+[26-Nov-2025 06:33:15 Europe/Madrid] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home2/juegosd2/public_html/alcohol.rocotodigital.com/check_database.php on line 30
+[26-Nov-2025 06:33:15 Europe/Madrid] PHP Notice:  Trying to get property 'num_rows' of non-object in /home2/juegosd2/public_html/alcohol.rocotodigital.com/check_database.php on line 31
+[26-Nov-2025 06:33:15 Europe/Madrid] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in /home2/juegosd2/public_html/alcohol.rocotodigital.com/check_database.php on line 36
+[26-Nov-2025 06:59:06 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined function checkAuth() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php:3
+Stack trace:
+#0 /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php(4): require_once()
+#1 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php on line 3
+[26-Nov-2025 06:59:10 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined function checkAuth() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php:3
+Stack trace:
+#0 /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php(4): require_once()
+#1 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php on line 3
+[26-Nov-2025 07:01:04 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined function checkAuth() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php:3
+Stack trace:
+#0 /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php(9): require_once()
+#1 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php on line 3
+[26-Nov-2025 07:03:55 Europe/Madrid] PHP Fatal error:  Uncaught Error: Class 'Database' not found in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php:6
+Stack trace:
+#0 /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php(10): require_once()
+#1 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php on line 6
+[26-Nov-2025 07:07:14 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined method Database::fetchOne() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php:10
+Stack trace:
+#0 /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php(12): require_once()
+#1 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php on line 10
+[26-Nov-2025 07:10:56 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined method Database::getConnection() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php:7
+Stack trace:
+#0 /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php(12): require_once()
+#1 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php on line 7
+[26-Nov-2025 07:15:53 Europe/Madrid] PHP Warning:  Use of undefined constant SITE_NAME - assumed 'SITE_NAME' (this will throw an Error in a future version of PHP) in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php on line 28
+[26-Nov-2025 07:15:53 Europe/Madrid] PHP Warning:  Use of undefined constant BASE_URL - assumed 'BASE_URL' (this will throw an Error in a future version of PHP) in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php on line 31
+[26-Nov-2025 07:15:53 Europe/Madrid] PHP Warning:  Use of undefined constant BASE_URL - assumed 'BASE_URL' (this will throw an Error in a future version of PHP) in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php on line 32
+[26-Nov-2025 07:15:53 Europe/Madrid] PHP Warning:  Use of undefined constant BASE_URL - assumed 'BASE_URL' (this will throw an Error in a future version of PHP) in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php on line 38
+[26-Nov-2025 07:15:53 Europe/Madrid] PHP Warning:  Use of undefined constant SITE_NAME - assumed 'SITE_NAME' (this will throw an Error in a future version of PHP) in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php on line 66
+[26-Nov-2025 07:15:53 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined function hasPermission() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/sidebar.php:375
+Stack trace:
+#0 /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/header.php(94): include()
+#1 /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php(12): require_once('/home2/juegosd2...')
+#2 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/sidebar.php on line 375
+[26-Nov-2025 07:21:08 Europe/Madrid] PHP Warning:  require_once(config.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 5
+[26-Nov-2025 07:21:08 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required 'config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 5
+[26-Nov-2025 07:25:58 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/config.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 5
+[26-Nov-2025 07:25:58 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 5
+[26-Nov-2025 07:26:05 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/config.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 5
+[26-Nov-2025 07:26:05 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 5
+[26-Nov-2025 07:26:07 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/config.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 5
+[26-Nov-2025 07:26:07 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 5
+[26-Nov-2025 07:41:52 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:41:52 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:41:52 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:41:52 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:42:09 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:42:09 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:42:09 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:42:09 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:42:15 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:42:15 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:42:15 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:42:15 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:45:12 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:45:12 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:45:12 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:45:12 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:46:55 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:46:55 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:46:55 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:46:55 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:53:15 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 41
+[26-Nov-2025 07:53:15 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:53:15 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 48
+[26-Nov-2025 07:53:15 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:53:15 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 55
+[26-Nov-2025 07:53:15 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 62
+[26-Nov-2025 07:53:15 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 150
+[26-Nov-2025 07:53:15 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:53:15 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 192
+[26-Nov-2025 07:53:15 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:53:15 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 9
+[26-Nov-2025 07:53:15 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 9
+[26-Nov-2025 07:53:15 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 10
+[26-Nov-2025 07:56:58 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 41
+[26-Nov-2025 07:56:58 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:56:58 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 48
+[26-Nov-2025 07:56:58 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:56:58 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 55
+[26-Nov-2025 07:56:58 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 62
+[26-Nov-2025 07:56:58 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 150
+[26-Nov-2025 07:56:58 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:56:58 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 192
+[26-Nov-2025 07:56:58 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:56:58 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 9
+[26-Nov-2025 07:56:58 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 9
+[26-Nov-2025 07:56:58 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 10
+[26-Nov-2025 07:57:00 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 41
+[26-Nov-2025 07:57:00 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:57:00 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 48
+[26-Nov-2025 07:57:00 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:57:00 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 55
+[26-Nov-2025 07:57:00 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 62
+[26-Nov-2025 07:57:00 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 150
+[26-Nov-2025 07:57:00 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:57:00 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 192
+[26-Nov-2025 07:57:00 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:57:00 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 9
+[26-Nov-2025 07:57:00 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 9
+[26-Nov-2025 07:57:00 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 10
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 41
+[26-Nov-2025 07:57:02 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 48
+[26-Nov-2025 07:57:02 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 55
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 62
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 150
+[26-Nov-2025 07:57:02 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 192
+[26-Nov-2025 07:57:02 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 9
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 9
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 10
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 41
+[26-Nov-2025 07:57:02 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 48
+[26-Nov-2025 07:57:02 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 55
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 62
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 150
+[26-Nov-2025 07:57:02 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 192
+[26-Nov-2025 07:57:02 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 9
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 9
+[26-Nov-2025 07:57:02 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 10
+[26-Nov-2025 07:57:05 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 41
+[26-Nov-2025 07:57:05 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:57:05 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 48
+[26-Nov-2025 07:57:05 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:57:05 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 55
+[26-Nov-2025 07:57:05 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 62
+[26-Nov-2025 07:57:05 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 150
+[26-Nov-2025 07:57:05 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:57:05 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/index.php on line 192
+[26-Nov-2025 07:57:05 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 07:57:05 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 9
+[26-Nov-2025 07:57:05 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 9
+[26-Nov-2025 07:57:05 Europe/Madrid] PHP Notice:  Undefined variable: user_query in /home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/footer.php on line 10
+[26-Nov-2025 08:00:40 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 08:00:40 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 08:00:40 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 08:00:40 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 08:03:14 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 08:03:14 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 08:03:14 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 08:03:14 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.registros_alcohol' doesn't exist
+[26-Nov-2025 08:13:48 Europe/Madrid] PHP Notice:  session_start(): A session had already been started - ignoring in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 9
+[26-Nov-2025 08:13:48 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 08:13:48 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 08:13:58 Europe/Madrid] PHP Notice:  session_start(): A session had already been started - ignoring in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 9
+[26-Nov-2025 08:13:58 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 08:13:58 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 08:14:28 Europe/Madrid] PHP Notice:  session_start(): A session had already been started - ignoring in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 9
+[26-Nov-2025 08:14:28 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 08:14:28 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 15:42:31 Europe/Madrid] PHP Notice:  session_start(): A session had already been started - ignoring in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 9
+[26-Nov-2025 15:42:31 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 15:42:31 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:07:48 Europe/Madrid] PHP Notice:  session_start(): A session had already been started - ignoring in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 9
+[26-Nov-2025 20:07:48 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:07:48 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:07:59 Europe/Madrid] PHP Notice:  session_start(): A session had already been started - ignoring in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 9
+[26-Nov-2025 20:07:59 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:07:59 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:08:42 Europe/Madrid] PHP Notice:  session_start(): A session had already been started - ignoring in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 9
+[26-Nov-2025 20:08:42 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:08:42 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:11:11 Europe/Madrid] PHP Notice:  session_start(): A session had already been started - ignoring in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 9
+[26-Nov-2025 20:11:11 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:11:11 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:11:24 Europe/Madrid] PHP Notice:  session_start(): A session had already been started - ignoring in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 9
+[26-Nov-2025 20:11:24 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:11:24 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:13:05 Europe/Madrid] PHP Notice:  session_start(): A session had already been started - ignoring in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 9
+[26-Nov-2025 20:13:05 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:13:05 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:14:02 Europe/Madrid] PHP Notice:  session_start(): A session had already been started - ignoring in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 9
+[26-Nov-2025 20:14:02 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:14:02 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:27:44 Europe/Madrid] PHP Notice:  session_start(): A session had already been started - ignoring in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 9
+[26-Nov-2025 20:27:44 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:27:44 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:29:03 Europe/Madrid] PHP Notice:  session_start(): A session had already been started - ignoring in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 9
+[26-Nov-2025 20:29:03 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 20:29:03 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/config/includes/functions.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/config/config.php on line 22
+[26-Nov-2025 21:18:51 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 21:18:51 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.alertas' doesn't exist
+[26-Nov-2025 21:18:51 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 21:18:55 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 21:18:55 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.alertas' doesn't exist
+[26-Nov-2025 21:18:55 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 21:19:53 Europe/Madrid] PHP Warning:  require_once(config/config.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/login.php on line 25
+[26-Nov-2025 21:19:53 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required 'config/config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/login.php on line 25
+[26-Nov-2025 21:21:04 Europe/Madrid] PHP Fatal error:  Uncaught Error: Class 'Database' not found in /home2/juegosd2/public_html/alcohol.rocotodigital.com/login.php:26
+Stack trace:
+#0 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/login.php on line 26
+[26-Nov-2025 21:22:52 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 21:22:52 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.alertas' doesn't exist
+[26-Nov-2025 21:22:52 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 21:22:57 Europe/Madrid] PHP Warning:  require_once(config/config.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/logout.php on line 6
+[26-Nov-2025 21:22:57 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required 'config/config.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/logout.php on line 6
+[26-Nov-2025 21:24:11 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined method Database::query() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/logout.php:12
+Stack trace:
+#0 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/logout.php on line 12
+[26-Nov-2025 21:24:15 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 21:24:15 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.alertas' doesn't exist
+[26-Nov-2025 21:24:15 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 21:24:16 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined method Database::query() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/logout.php:12
+Stack trace:
+#0 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/logout.php on line 12
+[26-Nov-2025 21:24:23 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined method Database::query() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/logout.php:12
+Stack trace:
+#0 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/logout.php on line 12
+[26-Nov-2025 21:24:32 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 21:24:32 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.alertas' doesn't exist
+[26-Nov-2025 21:24:32 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 21:24:50 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined method Database::query() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/logout.php:12
+Stack trace:
+#0 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/logout.php on line 12
+[26-Nov-2025 21:24:54 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined method Database::query() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/logout.php:12
+Stack trace:
+#0 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/logout.php on line 12
+[26-Nov-2025 21:31:49 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 21:31:49 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.alertas' doesn't exist
+[26-Nov-2025 21:31:49 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 21:33:56 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 21:33:56 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.alertas' doesn't exist
+[26-Nov-2025 21:33:56 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 21:41:57 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 21:41:57 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.alertas' doesn't exist
+[26-Nov-2025 21:41:57 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 22:01:54 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 22:01:54 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.alertas' doesn't exist
+[26-Nov-2025 22:01:55 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 22:02:02 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 22:02:02 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.alertas' doesn't exist
+[26-Nov-2025 22:02:02 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 22:22:05 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[26-Nov-2025 22:22:05 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.alertas' doesn't exist
+[26-Nov-2025 22:22:05 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[27-Nov-2025 05:14:59 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[27-Nov-2025 05:14:59 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.alertas' doesn't exist
+[27-Nov-2025 05:14:59 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[27-Nov-2025 06:04:49 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/Usuario.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/usuarios.php on line 5
+[27-Nov-2025 06:04:49 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/Usuario.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/usuarios.php on line 5
+[27-Nov-2025 06:04:52 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/Usuario.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/usuarios.php on line 5
+[27-Nov-2025 06:04:52 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/Usuario.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/usuarios.php on line 5
+[27-Nov-2025 06:05:14 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined method Database::query() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/logout.php:12
+Stack trace:
+#0 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/logout.php on line 12
+[27-Nov-2025 06:05:18 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[27-Nov-2025 06:05:18 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.alertas' doesn't exist
+[27-Nov-2025 06:05:18 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[27-Nov-2025 06:05:21 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined method Database::query() in /home2/juegosd2/public_html/alcohol.rocotodigital.com/logout.php:12
+Stack trace:
+#0 {main}
+  thrown in /home2/juegosd2/public_html/alcohol.rocotodigital.com/logout.php on line 12
+[27-Nov-2025 06:05:24 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[27-Nov-2025 06:05:24 Europe/Madrid] Error en fetchOne: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.alertas' doesn't exist
+[27-Nov-2025 06:05:24 Europe/Madrid] Error en fetchAll: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'juegosd2_alcohol.conductores' doesn't exist
+[27-Nov-2025 06:05:30 Europe/Madrid] PHP Warning:  require_once(/home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/Usuario.php): failed to open stream: No such file or directory in /home2/juegosd2/public_html/alcohol.rocotodigital.com/usuarios.php on line 5
+[27-Nov-2025 06:05:30 Europe/Madrid] PHP Fatal error:  require_once(): Failed opening required '/home2/juegosd2/public_html/alcohol.rocotodigital.com/includes/Usuario.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home2/juegosd2/public_html/alcohol.rocotodigital.com/usuarios.php on line 5
